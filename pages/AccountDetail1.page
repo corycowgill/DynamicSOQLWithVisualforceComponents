@@ -1,0 +1,8 @@
+<apex:page standardController="Account" extensions="AccountRelatedListExtension">
+	<apex:pageBlock title="Account: {!Account.Name}">
+		<c:GenericDataComponent inputObjectId="{!Account.Id}"/>
+		<apex:repeat value="{!cons}" var="con">
+			<c:GenericDataComponent inputObjectId="{!con.Id}"/>
+		</apex:repeat>
+	</apex:pageBlock>
+</apex:page>

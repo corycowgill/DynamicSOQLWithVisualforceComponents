@@ -1,0 +1,8 @@
+<apex:component controller="GenericDataView" >
+	<apex:attribute name="inputObjectId" description="Input Object ID" assignTo="{!objectId}" type="String"/>
+		<apex:pageBlockSection title="Generic Data Item">
+			<apex:repeat value="{!fieldSet}" var="f">
+				<apex:outputField value="{!objectData[f.fieldPath]}"/>
+			</apex:repeat>
+		</apex:pageBlockSection>
+</apex:component>
